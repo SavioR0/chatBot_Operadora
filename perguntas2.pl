@@ -1,28 +1,30 @@
-pergunta("Contratar planos", Resposta, Numero, Clien):-
+:-include(perguntas1).
+
+pergunta("Contratar planos", Numero, Clien):-
     format("Aqui estão todos as opçoes de planos. Escolha a opção  que deseja. "),
     format("\n 1- Plano 1\n 2- Plano 2 \n 3- Plano 3\n"),
     read(Entrada1),
-    pergunta1(Entrada1, Resposta, Numero, Clien).
+    pergunta1(Entrada1,  Numero, Clien).
 
-pergunta("Cancelar planos","Plano cancelado com sucesso",Numero, Clien):-
+pergunta("Cancelar planos",Numero, Clien):-
     format("Plano Cancelado com sucesso!"),
     format("\n Deseja finalizar operações ? 1- Sim , 2- Não "),
     read(Entrada),
     perguntaFim(Entrada, Numero, Clien).
 
-pergunta("Recarregar", Resposta, Numero, Clien):-
+pergunta("Recarregar",  Numero, Clien):-
     format("Selecione a opção de recarga que deseja :"),
     format("\n 1- 10 reias \n 2- 20 reias \n 3- 25 reais \n 4- 50 reais \n 5- Outro \n"),
     read(Entrada),
-    pergunta2(Entrada,Resposta, Numero, Clien).
+    pergunta3(Entrada, Numero, Clien).
 
-pergunta("Renovar plano vigente","Solicitação de renovação do plano realizada com sucesso", Numero, Clien ):-
+pergunta("Renovar plano vigente", Numero, Clien ):-
     format("Solicitação de renovação de plano realizada com sucesso"),
     format("Deseja finalizar operações ? 1- Sim , 2- Não "),
     read(Entrada),
     perguntaFim(Entrada, Numero, Clien).
 
-pergunta("Relatar problemas","Relato de problema realizado", Numero , Clien):-
+pergunta("Relatar problemas",Numero , Clien):-
     format("Digite o problema:"),
     read(Problema),
     format("Problema foi salvo e enviado ao sistema. Assunto :"),

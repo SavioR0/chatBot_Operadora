@@ -2,9 +2,6 @@
 :-include(perguntas1).
 :-include(perguntas2).
 
-
-
-
 chatbot(Numero, Clien):-
     write(Clien),
     format(" ,"),
@@ -22,7 +19,6 @@ chatbot(Numero, Clien):-
     pergunta(Entrada, Resposta, Numero, Clien),
     write(Resposta).
 
-cls:- write('\33\[2J').
 
 exec:-
     format("Olá, estou aqui para te ajudar! Sou o chatbot da operadora HOI. \n"),
@@ -33,7 +29,6 @@ exec:-
     read(Nome),
     format("\nConfirme seu numero : "),
     read(Numero),
-    %assertz(cliente(Numero, Nome))).
     chatbot(Numero, Nome)).
 
 
